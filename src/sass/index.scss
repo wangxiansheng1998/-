@@ -8,22 +8,34 @@ $wid:675px;
 
     }
 }
-.nav{
-    width: $wid;
-    height: 40px;
+.navwarp{
+    width: 100%;
     background-color: #000;
-    margin: 0 auto; 
-    ul{
-    height: 40px;
+    .nav{
+        width: $wid;
+        height: 40px;
+        background-color: #000;
+        margin: 0 auto; 
+        ul{
+        height: 40px;
+        }
+       li{
+        height: 40px;
+        font-size: 8px; 
+        line-height: 40px;
+        padding-top: 0 ;
+        padding-left: 10px ;
+        text-align: center;
+        a{
+            color: #fff;}
+       }
     }
-   li{
-    height: 40px;
-    font-size: 8px; 
-    line-height: 40px;
-    padding-top: 0 ;
-    padding-left: 10px ;
-    text-align: center;
-    a{
-        color: #fff;}
-   }
+}
+
+.carousel-inner{
+     margin-left: -305px;
+    margin: 0 auto;
+    img{
+        height: 450px;
+    }
 }
