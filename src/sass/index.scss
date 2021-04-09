@@ -1,15 +1,29 @@
-$wid:510px;
-#header{
+$wid:675px;
+.header{
     width: $wid;
-    height: 100px;
     margin: 0 auto;
+    img{
+        height: 45px;
+        margin-left: -305px;
+
+    }
 }
-#nav{
+.nav{
     width: $wid;
-    height: 50px;
+    height: 40px;
     background-color: #000;
     margin: 0 auto; 
+    ul{
+    height: 40px;
+    }
    li{
-      margin-right: 80px;
+    height: 40px;
+    font-size: 8px; 
+    line-height: 40px;
+    padding-top: 0 ;
+    padding-left: 10px ;
+    text-align: center;
+    a{
+        color: #fff;}
    }
 }
