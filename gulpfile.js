@@ -6,58 +6,71 @@ const uglify = require("gulp-uglify");
 const cleanCss = require("gulp-clean-css");
 // const bable = require("gulp-bable");
 const rename = require("gulp-rename");
+const sourcemaps = require("gulp-sourcemaps");
 
 
 //拷贝html文件
 // 
-gulp.task("index.html", done => {
-    gulp.src("index.html")
+gulp.task("indexhtml", done => {
+    gulp.src("src/index.html")
         .pipe(gulp.dest("dist"))
         .pipe(connect.reload());
     done();
 });
 
 gulp.task("html", done => {
-    gulp.src(["*.html", "!index.html"])
+    gulp.src(["./src/*.html", "!./src/index.html"])
         .pipe(gulp.dest("dist/html"))
     done();
 });
 
 //将sass转换成css
 gulp.task("sass", done => {
-    gulp.src("sass/*.scss")
+    gulp.src("./src/sass/*.scss")
+        .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(gulp.dest("dist/css"));
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest("dist/css"))
+        .pipe(connect.reload());;
     done();
 });
-
+gulp.task("cbt", done => {
+    gulp.src("./src/bootstrap/css/*")
+        .pipe(gulp.dest("dist/bootstrap/css"))
+    done();
+});
 //拷贝js并且压缩js
 
 gulp.task("js", done => {
-    gulp.src("js/*.js")
+    gulp.src("./src/js/*.js")
         .pipe(gulp.dest("dist/js"))
         .pipe(connect.reload());
     done();
 });
-
+gulp.task("cimg", done => {
+    gulp.src("./src/img/*")
+        .pipe(gulp.dest("dist/img"))
+        .pipe(connect.reload());
+    done();
+});
 //将高版本的js转换成ES5
 
-gulp.task("babel", done => {
-    gulp.src("js/b.js")
-        .pipe(babel({
-            presets: ['@babel/preset-env']
-        }))
-        .pipe(gulp.dest("dist/js"));
-    done();
-})
+// gulp.task("babel", done => {
+//     gulp.src("./src/js/b.js")
+//         .pipe(babel({
+//             presets: ['@babel/preset-env']
+//         }))
+//         .pipe(gulp.dest("dist/js"));
+//     done();
+// })
 
 
 // //监听文件变化，一旦监听的文件发生变化，就执行指定的任务
 gulp.task("watch", done => {
 
-    gulp.watch("index.html", gulp.series("index.html"));
-    gulp.watch("sass/*.scss", gulp.series("sass"));
-    gulp.watch("js/*.js", gulp.series("js"));
+    gulp.watch("index.html", gulp.series("indexhtml"));
+    gulp.watch("./src/sass/*.scss", gulp.series("sass"));
+    gulp.watch("./src/js/*.js", gulp.series("js"));
     done();
 })
 
@@ -71,5 +84,5 @@ gulp.task("server", done => {
 
     done();
 });
-gulp.task("build", gulp.parallel("index.html", "sass", "js","html"));
-gulp.task("default", gulp.parallel("build","server", "watch"));
+gulp.task("build", gulp.parallel("cimg", "indexhtml", "sass", "js", "html"));
+gulp.task("default", gulp.parallel("build", "server", "watch"));

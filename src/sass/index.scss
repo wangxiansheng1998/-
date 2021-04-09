@@ -1,0 +1,15 @@
+$wid:510px;
+#header{
+    width: $wid;
+    height: 100px;
+    margin: 0 auto;
+}
+#nav{
+    width: $wid;
+    height: 50px;
+    background-color: #000;
+    margin: 0 auto; 
+   li{
+      margin-right: 80px;
+   }
+}
