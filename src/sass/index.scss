@@ -1,16 +1,21 @@
-$wid:675px;
+$wid:1280px;
+html{
+    overflow-x: hidden;
+}
+body{
+    margin:0; 
+    padding:0;
+}
+
+
 .header{
     width: $wid;
     margin: 0 auto;
     img{
         height: 45px;
-        margin-left: -305px;
-
     }
 }
-.navwarp{
-    width: 100%;
-    background-color: #000;
+
     .nav{
         width: $wid;
         height: 40px;
@@ -18,24 +23,88 @@ $wid:675px;
         margin: 0 auto; 
         ul{
         height: 40px;
+        padding-left: 320px;
         }
        li{
         height: 40px;
         font-size: 8px; 
         line-height: 40px;
-        padding-top: 0 ;
+        padding-top: -15px ;
         padding-left: 10px ;
         text-align: center;
         a{
-            color: #fff;}
+            color: #878787;}
        }
     }
-}
 
 .carousel-inner{
-     margin-left: -305px;
+    width: $wid;
+    margin-left: -305px;
     margin: 0 auto;
-    img{
-        height: 450px;
+    position: relative;
+
+    .nav_mean{
+        width: $wid;
+        margin: 0 auto;
+        font-size: 10px;
+        color: #fff;
+        position: absolute;
+        left: 0px;
+        top: 10px;
+        z-index: 1;
+        padding-left:350px ;
+        .loog{
+            width: 90px;
+            height: 25px;
+            float: left;
+            line-height: 25px;
+            img{
+                width: 25px;
+                float: left;
+            }
+            h3{
+                width: 70px;
+                font-weight: 900;
+                color: #fff;
+                font-size: 15px;
+                margin-left: 35px;
+                margin-top: 5px;
+            }
+        }
+        ul{
+            width: 580px;
+            list-style: none;
+            float: left;
+            margin-top: 5px;
+            margin-left: 50px;
+            li{
+                float: left;
+                font-size: 15px;
+                font-weight: 500;
+                margin-left: 30px;
+            }
+        }
+    }
+
+    .carousel-caption{
+        width: 370px;
+        height: 120px;
+        position: absolute;
+        left: 800px;
+        top: 150px;
+        h2{ font-size: 30px;}
+        h4{
+            font-size: 15px;
+            width: 400px;
+        }
+    button{
+        width: 73px;
+        height: 25px;
+        background-color: #f34141;
+        border-radius: 8px;
+        a{
+            color: #fff;
+        }
+    }
     }
 }
