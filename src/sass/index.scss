@@ -36,13 +36,6 @@ body{
             color: #878787;}
        }
     }
-
-.carousel-inner{
-    width: $wid;
-    margin-left: -305px;
-    margin: 0 auto;
-    position: relative;
-
     .nav_mean{
         width: $wid;
         margin: 0 auto;
@@ -50,7 +43,7 @@ body{
         color: #fff;
         position: absolute;
         left: 0px;
-        top: 10px;
+        top: 100px;
         z-index: 1;
         padding-left:350px ;
         .loog{
@@ -71,12 +64,13 @@ body{
                 margin-top: 5px;
             }
         }
-        ul{
+        .ul_nav{
             width: 580px;
             list-style: none;
             float: left;
             margin-top: 5px;
-            margin-left: 50px;
+            margin-left: 130px;
+            position: absolute;
             li{
                 float: left;
                 font-size: 15px;
@@ -84,8 +78,28 @@ body{
                 margin-left: 30px;
             }
         }
+        .box{
+            width: $wid;
+            height: 200px;
+            li{
+                display: flex;  
+                text-align: center;
+                float: left;
+                position: relative;
+                left: -130px;
+                top: 40px;
+                 display: none;
+                img{
+                    width: 110px;
+                }
+            }
+        }
     }
-
+.carousel-inner{
+    width: 100%;
+    margin-left: -305px;
+    margin: 0 auto;
+    position: relative;
     .carousel-caption{
         width: 370px;
         height: 120px;
@@ -159,6 +173,7 @@ body{
         .phone{   
                 width: 680px;
                 display: flex;
+                justify-content: flex-start;
                 flex-wrap: wrap;
                 margin: 0 auto;
                 color: #000;
@@ -168,6 +183,7 @@ body{
                         background-color: #fff;
                         width: 330px;
                         height: 230px;
+                        margin-right: 10px;
                         margin-top: 20px;
                          position: relative;
                         img{
@@ -239,9 +255,121 @@ body{
                 
         }
         .shop{
-                display: none;   
+            
                 width: 680px;
                 display: flex;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                color: #000;
+                text-align: center;
+                justify-content: flex-start;
+                display: none;
+               
+                    .figure1{
+                        background-color: #fff;
+                        width: 320px;
+                        height: 230px;
+                        margin-top: 20px;
+                        margin-right: 10px;
+                         position: relative;
+                        img{
+                            width: 285px;
+                    
+                        }
+                        
+                        .txt{
+                            width: 170px;
+                            margin-left: 12px;  
+                            position: absolute;
+                            top: 70px;
+                           
+                            h3{
+                                font-size: 16px;
+                            }
+                            h4{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                  
+                      
+                        .figure{
+                            background-color: #fff;
+                            margin: 20px auto;
+                            width: 150px;
+                            height: 230px;
+                            .img1{
+                                margin-top: 8px;
+                            }
+                            img{
+                                margin-top: 50px;
+                                width: 140px;
+                            }
+                           
+                            figcaption{
+                                h3{
+                                    font-size: 10px;
+                                }
+                                h4{
+                                    font-size: 8px;
+                                }
+                            }
+                        }
+             
+                    
+               
+                
+        
+        }
+    }
+    .yijia{
+        width: 675px;
+        margin: 0 auto;
+        background:#a4a4a4 ;
+        .txt{
+            h2{
+                width: 80px;
+                float: left;
+                font-size: 16px;
+                color: #000;
+            }
+            .text{
+                height: 60px;
+                line-height: 60px;
+                float: right;
+                .text1{
+                    width: 40px;
+                    height: 20px;
+                    text-align: center;
+                    border-radius:6px ;
+                    margin-top: 20px;
+                    line-height: 20px;
+                    float: left;
+                    color: #f56868;
+                    background: #fff;
+        
+                }
+                .text2{
+                    width: 60px;
+                    height: 15px;
+                    border-radius:6px ;
+                    text-align: center;
+                    margin-top: 20px;
+                    margin-left: 20px;
+                    line-height: 20px;
+                    float: left;
+                    color: #000;
+        
+                }
+            }
+            
+        }
+       
+      
+        .phone{   
+                width: 680px;
+                display: flex;
+                justify-content: flex-start;
                 flex-wrap: wrap;
                 margin: 0 auto;
                 color: #000;
@@ -251,7 +379,290 @@ body{
                         background-color: #fff;
                         width: 330px;
                         height: 230px;
+                        margin-right: 10px;
                         margin-top: 20px;
+                         position: relative;
+                        img{
+                            width: 285px;
+                    
+                        }
+                        .btn1{
+                            width: 70px;
+                            height: 25px;
+                            line-height: 25px;
+                            margin-top: 15px;
+                            margin-left: -35px;
+                            border: #f34141 1px solid;
+                            color: #f34141;
+                            background-color: #fde3e3;
+                            position: absolute;
+                            top: 5px;
+                            left: 60px;
+                        }
+                        .txt{
+                            margin-left: 12px;  
+                            position: absolute;
+                            top: 70px;
+                           
+                            h3{
+                                font-size: 16px;
+                            }
+                            h4{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                  
+                      
+                        .figure{
+                            background-color: #fff;
+                            margin: 20px auto;
+                            width: 150px;
+                            height: 230px;
+                            .img1{
+                                margin-top: 8px;
+                            }
+                            img{
+                                margin-top: 50px;
+                                width: 140px;
+                            }
+                            .btn{
+                                width: 70px;
+                                height: 25px;
+                                line-height: 15px;
+                                margin-top: 15px;
+                                margin-left: -35px;
+                                border: #f34141 1px solid;
+                                color: #f34141;
+                                background-color: #fde3e3;
+                            }
+                            figcaption{
+                                h3{
+                                    font-size: 10px;
+                                }
+                                h4{
+                                    font-size: 8px;
+                                }
+                            }
+                        }
+             
+                    
+               
+                
+        }
+        .other{
+            
+                width: 680px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                color: #000;
+                text-align: center;
+                justify-content: flex-start;
+                 display: none;
+               
+                    .figure1{
+                        background-color: #fff;
+                        width: 320px;
+                        height: 230px;
+                        margin-top: 20px;
+                        margin-right: 10px;
+                         position: relative;
+                        img{
+                            width: 285px;
+                    
+                        }
+                        
+                        .txt{
+                            width: 170px;
+                            margin-left: 12px;  
+                            position: absolute;
+                            top: 70px;
+                           
+                            h3{
+                                font-size: 16px;
+                            }
+                            h4{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                  
+                      
+                        .figure{
+                            background-color: #fff;
+                            margin: 20px auto;
+                            width: 150px;
+                            height: 230px;
+                            .img1{
+                                margin-top: 8px;
+                            }
+                            img{
+                                margin-top: 50px;
+                                width: 140px;
+                            }
+                           
+                            figcaption{
+                                h3{
+                                    font-size: 10px;
+                                }
+                                h4{
+                                    font-size: 8px;
+                                }
+                            }
+                        }
+             
+                    
+               
+                
+        
+        }
+        
+    }
+    .realme{
+        width: 675px;
+        margin: 0 auto;
+        background:#a4a4a4 ;
+        padding-top: 60px;
+        .txt{
+            h2{
+                font-size: 16px;
+                float: left;
+                color: #000;
+            }
+            .text{
+                height: 60px;
+                line-height: 60px;
+                float: right;
+                .text1{
+                    width: 40px;
+                    height: 20px;
+                    text-align: center;
+                    border-radius:6px ;
+                    margin-top: 20px;
+                    line-height: 20px;
+                    float: left;
+                    color: #f56868;
+                    background: #fff;
+        
+                }
+                .text2{
+                    width: 60px;
+                    height: 15px;
+                    border-radius:6px ;
+                    text-align: center;
+                    margin-top: 20px;
+                    margin-left: 20px;
+                    line-height: 20px;
+                    float: left;
+                    color: #000;
+        
+                }
+            }
+            
+        }
+       
+      
+        .phone{   
+                width: 680px;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                color: #000;
+                text-align: center;
+               
+                    .figure1{
+                        background-color: #fff;
+                        width: 330px;
+                        height: 230px;
+                        margin-right: 10px;
+                        margin-top: 20px;
+                         position: relative;
+                        img{
+                            width: 285px;
+                    
+                        }
+                        .btn1{
+                            width: 70px;
+                            height: 25px;
+                            line-height: 25px;
+                            margin-top: 15px;
+                            margin-left: -35px;
+                            border: #f34141 1px solid;
+                            color: #f34141;
+                            background-color: #fde3e3;
+                            position: absolute;
+                            top: 5px;
+                            left: 60px;
+                        }
+                        .txt{
+                            margin-left: 12px;  
+                            position: absolute;
+                            top: 70px;
+                           
+                            h3{
+                                font-size: 16px;
+                            }
+                            h4{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                  
+                      
+                        .figure{
+                            background-color: #fff;
+                            margin: 20px auto;
+                            width: 150px;
+                            height: 230px;
+                            .img1{
+                                margin-top: 8px;
+                            }
+                            img{
+                                margin-top: 50px;
+                                width: 140px;
+                            }
+                            .btn{
+                                width: 70px;
+                                height: 25px;
+                                line-height: 15px;
+                                margin-top: 15px;
+                                margin-left: -35px;
+                                border: #f34141 1px solid;
+                                color: #f34141;
+                                background-color: #fde3e3;
+                            }
+                            figcaption{
+                                h3{
+                                    font-size: 10px;
+                                }
+                                h4{
+                                    font-size: 8px;
+                                }
+                            }
+                        }
+             
+                    
+               
+                
+        }
+        .other{
+                width: 680px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                color: #000;
+                text-align: center;
+                justify-content: flex-start;
+                display: none;
+               
+                    .figure1{
+                        background-color: #fff;
+                        width: 320px;
+                        height: 230px;
+                        margin-top: 20px;
+                        margin-right: 10px;
                          position: relative;
                         img{
                             width: 285px;
@@ -304,3 +715,47 @@ body{
         }
     }
 }
+.footer{
+    text-align: center;
+    ul{
+        list-style: none;
+        margin-top: 20px;
+        font-size: 10px;
+        float: left;
+    }
+    .tel{
+       
+        margin-right:140px ;
+        #btn{
+            width: 180px;
+            height: 50px;
+            margin-top: 50px;
+            background:#666 ;
+            border-radius: 45px;
+        }
+        p{
+            margin-left: 690px;
+        }
+    }
+    .ttt{
+        width: 675px;
+        margin: 0 auto;
+        border-top: solid 1px #ccc;
+        margin-top: 20px;
+        padding-top: 25px;
+        font-size: 8px;
+    }
+}
+.app{
+    width: 40px;
+    height: 100px;
+    line-height:20px;
+    border-radius: 5px;
+    background: #f45055;
+    padding:0 10px ;
+    font-size: 10PX;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+

@@ -19,7 +19,7 @@ gulp.task("indexhtml", done => {
 });
 
 gulp.task("html", done => {
-    gulp.src(["./src/*.html", "!./src/index.html"])
+    gulp.src(["src/*.html", "!./src/index.html"])
         .pipe(gulp.dest("dist/html"))
     done();
 });
@@ -68,7 +68,8 @@ gulp.task("cimg", done => {
 // //监听文件变化，一旦监听的文件发生变化，就执行指定的任务
 gulp.task("watch", done => {
 
-    gulp.watch("index.html", gulp.series("indexhtml"));
+    gulp.watch("./src/index.html", gulp.series("indexhtml"));
+    gulp.watch("src/*.html", gulp.series("html"));
     gulp.watch("./src/sass/*.scss", gulp.series("sass"));
     gulp.watch("./src/js/*.js", gulp.series("js"));
     done();
@@ -79,7 +80,7 @@ gulp.task("server", done => {
 
     connect.server({
         root: "dist",
-       port:3030
+        port: 0000
     })
 
     done();
