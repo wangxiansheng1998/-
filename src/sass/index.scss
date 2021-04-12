@@ -108,3 +108,199 @@ body{
     }
     }
 }
+.concentwarp{
+    width: $wid;
+    margin: 0 auto;
+    background:#a4a4a4 ;
+    .concent{
+        width: 675px;
+        margin: 0 auto;
+        background:#a4a4a4 ;
+        padding-top: 60px;
+        .txt{
+            h3{
+                font-size: 16px;
+                float: left;
+                color: #000;
+            }
+            .text{
+                height: 60px;
+                line-height: 60px;
+                float: right;
+                .text1{
+                    width: 40px;
+                    height: 20px;
+                    text-align: center;
+                    border-radius:6px ;
+                    margin-top: 20px;
+                    line-height: 20px;
+                    float: left;
+                    color: #f56868;
+                    background: #fff;
+        
+                }
+                .text2{
+                    width: 60px;
+                    height: 15px;
+                    border-radius:6px ;
+                    text-align: center;
+                    margin-top: 20px;
+                    margin-left: 20px;
+                    line-height: 20px;
+                    float: left;
+                    color: #000;
+        
+                }
+            }
+            
+        }
+       
+      
+        .phone{   
+                width: 680px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                color: #000;
+                text-align: center;
+               
+                    .figure1{
+                        background-color: #fff;
+                        width: 330px;
+                        height: 230px;
+                        margin-top: 20px;
+                         position: relative;
+                        img{
+                            width: 285px;
+                    
+                        }
+                        .btn1{
+                            width: 70px;
+                            height: 25px;
+                            line-height: 25px;
+                            margin-top: 15px;
+                            margin-left: -35px;
+                            border: #f34141 1px solid;
+                            color: #f34141;
+                            background-color: #fde3e3;
+                            position: absolute;
+                            top: 5px;
+                            left: 60px;
+                        }
+                        .txt{
+                            margin-left: 12px;  
+                            position: absolute;
+                            top: 70px;
+                           
+                            h3{
+                                font-size: 16px;
+                            }
+                            h4{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                  
+                      
+                        .figure{
+                            background-color: #fff;
+                            margin: 20px auto;
+                            width: 150px;
+                            height: 230px;
+                            .img1{
+                                margin-top: 8px;
+                            }
+                            img{
+                                margin-top: 50px;
+                                width: 140px;
+                            }
+                            .btn{
+                                width: 70px;
+                                height: 25px;
+                                line-height: 15px;
+                                margin-top: 15px;
+                                margin-left: -35px;
+                                border: #f34141 1px solid;
+                                color: #f34141;
+                                background-color: #fde3e3;
+                            }
+                            figcaption{
+                                h3{
+                                    font-size: 10px;
+                                }
+                                h4{
+                                    font-size: 8px;
+                                }
+                            }
+                        }
+             
+                    
+               
+                
+        }
+        .shop{
+                display: none;   
+                width: 680px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                color: #000;
+                text-align: center;
+               
+                    .figure1{
+                        background-color: #fff;
+                        width: 330px;
+                        height: 230px;
+                        margin-top: 20px;
+                         position: relative;
+                        img{
+                            width: 285px;
+                    
+                        }
+                        
+                        .txt{
+                            width: 170px;
+                            margin-left: 12px;  
+                            position: absolute;
+                            top: 70px;
+                           
+                            h3{
+                                font-size: 16px;
+                            }
+                            h4{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                  
+                      
+                        .figure{
+                            background-color: #fff;
+                            margin: 20px auto;
+                            width: 150px;
+                            height: 230px;
+                            .img1{
+                                margin-top: 8px;
+                            }
+                            img{
+                                margin-top: 50px;
+                                width: 140px;
+                            }
+                           
+                            figcaption{
+                                h3{
+                                    font-size: 10px;
+                                }
+                                h4{
+                                    font-size: 8px;
+                                }
+                            }
+                        }
+             
+                    
+               
+                
+        
+        }
+    }
+}

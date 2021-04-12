@@ -79,7 +79,7 @@ gulp.task("server", done => {
 
     connect.server({
         root: "dist",
-        livereload: true
+       port:3030
     })
 
     done();
