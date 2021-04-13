@@ -54,6 +54,7 @@ body{
             img{
                 width: 25px;
                 float: left;
+                z-index: 1;
             }
             h3{
                 width: 70px;
@@ -65,7 +66,7 @@ body{
             }
         }
         .ulnav{
-            width: 580px;
+            width: 750px;
             list-style: none;
             float: left;
             margin-top: 5px;
@@ -79,29 +80,56 @@ body{
             }
             .mean{
                 width: 20px;
-                
+              margin-left: 560px;             
             }
+        }
+        .meannav{
+            width: 180px;
+            height: 120px;
+            background: #fff;
+            position: relative;
+            top: 40px;
+            right: -650px;
+            color: #000;
+            display: none;
+            img{
+                margin-right: 165px;
+               
+            }
+         li{
+             list-style: none;
+             margin-right: 20px;
+             p{
+                 margin: -20px 35px 15px;
+             }
+            
+         }
+            
         }
         .box{
             background-color: #fff;
-            width: 140%;
+            width: 1280px;
             height: 260px;
-            // display: flex;
-            margin: -25px -350px;
-             display: none;
+            float: left;
+            margin: -15px -440px;
+            display: none;
             ul{
-                width: 140%;
-               height:260px;
-                display: flex;
+               
+                width: 100%;
+                height:260px;
+                // float: left;
+              
                 li{ 
+                    display: flex;
                     list-style: none;
                     height:260px;
                     text-align: center;
-                     float: left;
+                    float: left;
+                    margin: 0 auto;
                     position: relative;
-                    left: -200px;
+                    left: 290px;
                     top: 70px;
-                    display: none;
+                   
                     img{
                         width: 110px;
                     }
@@ -271,12 +299,13 @@ body{
         .shop{
                 display: flex;
                 width: 680px;
+                float: left;
                 flex-wrap: wrap;
                 margin: 0 auto;
                 color: #000;
                 text-align: center;
                 justify-content: flex-start;
-                display: none;
+                // display: none;
                
                     .figure1{
                         background-color: #fff;
@@ -379,7 +408,7 @@ body{
         }
        
       
-        .phone{   
+        .phone1{   
                 width: 680px;
                 display: flex;
                 justify-content: flex-start;
@@ -576,7 +605,7 @@ body{
         }
        
       
-        .phone{   
+        .phone1{   
                 width: 680px;
                 display: flex;
                 justify-content: flex-start;
