@@ -3,8 +3,7 @@ let text2 = $(".text2");
 let btn1 = $(".btn1");
 let text3 = $(".text3");
 let btn2 = $(".btn2");
-let checkbox = $("checkbox");
-
+console.log($("#check"))
 btn1.click(function () {
     alert("已获得验证码")
 });
@@ -20,9 +19,10 @@ text1.change(function () {
                 alert("请输入正确的密码格式")
             } else {
                 btn2.click(function () {
-                   
-                    if (checkbox.prop("checked")) {
-                        if (text1.val() && text2.val() && text3.val() != "") {
+
+                    if ($("#check").prop("checked")) {
+                     
+                        if (text1.val() && text2.val() && text3.val() ) {
                             $.get("http://jx.xuzhixiang.top/ap/api/reg.php", {
                                 username: text1.val(),
                                 password: text3.val(),
@@ -37,9 +37,10 @@ text1.change(function () {
                                     }
                                 });
                         }
-                    } else { alert("请阅读并同意《账号使用协议》《隐私政策》") }
+                    }
+                    else { alert("请阅读并同意《账号使用协议》《隐私政策》") }
                 });
-              
+
             }
         });
     }

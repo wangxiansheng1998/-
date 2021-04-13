@@ -13,23 +13,29 @@ txt2.click(function () {
     $(".boxpc").show();
 })
 
-$("#btn2").click(function () {
-    if ($(".text1").val() && $(".text2").val() != "") {
+$(".btn2").click(function () {
+    if ($(".text1").val() && $(".text2").val()) {
         $.get("http://jx.xuzhixiang.top/ap/api/login.php", {
             username: $(".text1").val(),
             password: $(".text2").val(),
         }, res => {
-            let str = "";
-            console.log(res)
-            str = res.data.username;
-            console.log(str)
             if (res.code == 1) {
-                alert("登录成功")
-                location.href = "index.html?username=" + str + "";
+                alert("登陆成功");
+                location.href = "http://localhost:8080/";
+                localStorage.setItem("user",JSON.stringify(res.data));
             } else {
                 alert("用户名或密码不正确")
             }
         })
+        // axios.get("http://jx.xuzhixiang.top/ap/api/login.php", {
+        //     params: {
+        //         username: $(".text1").val(),
+        //         password: $(".text2").val()
+        //     }
+
+        // }).then(res => {
+        //     console.log(res);
+        // })
     } else {
         alert("用户名或密码不能为空")
     }
