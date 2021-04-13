@@ -26,7 +26,8 @@ $(".btn2").click(function () {
             } else {
                 alert("用户名或密码不正确")
             }
-        })
+        });
+
         // axios.get("http://jx.xuzhixiang.top/ap/api/login.php", {
         //     params: {
         //         username: $(".text1").val(),
@@ -34,7 +35,13 @@ $(".btn2").click(function () {
         //     }
 
         // }).then(res => {
-        //     console.log(res);
+        //     if (res.code == 1) {
+        //         alert("登陆成功");
+        //         location.href = "http://localhost:8080/";
+        //         localStorage.setItem("user",JSON.stringify(res.data));
+        //     } else {
+        //         alert("用户名或密码不正确")
+        //     }
         // })
     } else {
         alert("用户名或密码不能为空")

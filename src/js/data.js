@@ -50,6 +50,6 @@ let data = [{
 },
 {
     imgsrc:"https://dsfs.oppo.com/archives/202010/202010300610475f9be84b7a808.png?x-oss-process=image/format,webp",
-    pagename:"K7流焰 镜黑",
+    pagename:"K7流焰 ",
     price:2199
 }]
