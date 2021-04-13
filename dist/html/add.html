@@ -18,14 +18,15 @@
             add(v)
         });
         function add(obj) {
-            $.get("http://jx.xuzhixiang.top/ap/api/login.php", {
-                imgsrc: obj.imgsrc,
-                pagename: obj.pagename,
-                price: obj.price,
-                uid: 51135
-            }, res => {
-                console.log(res.data);
+            $.get("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php", {
+                pimg: obj.pimg,
+                pname: obj.pname,
+                pprice: obj.pprice,
+                uid: 51165
+            }).then(res => {
+                console.log(res);
             })
+
         }
 
     </script>
