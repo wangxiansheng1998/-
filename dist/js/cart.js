@@ -39,18 +39,18 @@ axios.get("http://jx.xuzhixiang.top/ap/api/cart-list.php", {
     params: {
         id: uid
     }
-}).then(
-    res => {
-        console.log(res);
-        let data = res.data.data;
+}).then(res => {
+    console.log(res);
+    let data = res.data.data;
+    console.log(data);
 
-        let shop = data.map(res => (
+    let shop = data.map(res =>
 
-            `
+        `
             <ul>
                     <li class="check"> <input id="check" type="checkbox" name="" id=""></li>
-                    <li class="pic">${res.pimg}</li>
-                    <li class="pname">${res.name}</li>
+                    <li class="pic"><img src="${res.pimg}" alt=""></li>
+                    <li class="pname">${res.pname}</li>
                     <li class="pprice">${res.pprice}</li>
                     <li>
                         <div class="detailbox">
@@ -62,11 +62,8 @@ axios.get("http://jx.xuzhixiang.top/ap/api/cart-list.php", {
                         <button class="btn1">删除</button>
                     </li>
                 </ul>
-            `
-
-        ));
-        $("boxcard").html(shop.join(""))
+            `);
+    $(".boxcard").html(shop.join(""))
 
 
-        console.log(data);
-    })
+})
