@@ -85,7 +85,6 @@ axios.get("http://jx.xuzhixiang.top/ap/api/productlist.php", {
 
     $(".phone").html(str)
     $(".phone").find("div").eq(0).attr('class', "figure1");
-    $(".phone").find("div").eq(0).append($(".btn1"));
-    $(".figure1").children('h3').css({ "margin-top": "105px"})
-  
+    $(".figure1").children("img").css({ "margin-top": "105px"})
+ 
 })

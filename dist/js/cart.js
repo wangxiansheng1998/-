@@ -32,17 +32,41 @@ $(".mean").click(function () {
 
 })
 
-// let str =JSON.parse(localStorage.getItem("user"))
-// let uid =str.id;
+let str = JSON.parse(localStorage.getItem("user"))
+let uid = str.id;
 
-// axios.get("http://jx.xuzhixiang.top/ap/api/cart-list.php",{
-//     params:{
-//         id:uid
-//     }
-// }).then(
-//     res=>{
-//         console.log(res);
-//         let data =res.data.data;
-//         console.log(data);
-//     }
-// )
+axios.get("http://jx.xuzhixiang.top/ap/api/cart-list.php", {
+    params: {
+        id: uid
+    }
+}).then(
+    res => {
+        console.log(res);
+        let data = res.data.data;
+
+        let shop = data.map(res => (
+
+            `
+            <ul>
+                    <li class="check"> <input id="check" type="checkbox" name="" id=""></li>
+                    <li class="pic">${res.pimg}</li>
+                    <li class="pname">${res.name}</li>
+                    <li class="pprice">${res.pprice}</li>
+                    <li>
+                        <div class="detailbox">
+                            <span class="minus">-</span><input type="text" value="${res.pnum}" class="num"><span
+                                class="plus">+</span>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="btn1">删除</button>
+                    </li>
+                </ul>
+            `
+
+        ));
+        $("boxcard").html(shop.join(""))
+
+
+        console.log(data);
+    })

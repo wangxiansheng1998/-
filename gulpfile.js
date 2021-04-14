@@ -40,6 +40,12 @@ gulp.task("cbt", done => {
     done();
 });
 //拷贝js并且压缩js
+ 
+gulp.task("tb", done => {
+    gulp.src("./src/font*")
+        .pipe(gulp.dest("dist/font"))
+    done();
+});
 
 gulp.task("js", done => {
     gulp.src("./src/js/*.js")

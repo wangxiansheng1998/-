@@ -6,111 +6,219 @@ body{
     margin:0; 
     padding:0;
 }
-
-.navmean{
+.header{
     width: $wid;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    margin: 0 auto;
-    font-size: 10px;
-    position: absolute;
-    background:#fff ;
-    color: #000;
-    padding-left:230px ;
-    .loog{
-        width: 90px;
-        height: 25px;
-        float: left;
+    height: 50px;
+    .navmean{
+        width: $wid;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        margin: 0 auto;
+        font-size: 10px;
         position: absolute;
-        margin-top: 5px;
-        line-height: 25px;
-        img{
-            width:30px;
-            float: left;
-            z-index: 1;
-        }
-        h3{
-            width: 70px;
-            font-weight: 900;
-            color: #000;
-            font-size: 15px;
-            margin-left: 35px;
-            margin-top: 5px;
-        }
-    }
-    .ulnav{
-        width: 750px;
-        list-style: none;
-        float: left;
-        margin-top: 10px;
-        margin-left: 60px;
-        position: absolute;
-        li{
-            float: left;
-            font-size: 15px;
-            font-weight: 500;
-            margin-left: 30px;
-        }
-        .mean{
-            width: 20px;
-            margin-left: 570px;             
-        }
-    }
-    .meannav{
-        width: 180px;
-        height: 120px;
-        background: #fff;
-        position: absolute;
-        top: 30px;
-        left: 900px;
+        background:#fff ;
         color: #000;
-        display: none;
-        img{
-            margin-right: 165px;
-           
-        }
-     li{
-         list-style: none;
-         margin-right: 20px;
-           p{
-             margin: -20px 35px 15px;
-            }
-        
-        }
-        
-    }
-    .box{
-        background-color: #fff;
-        width: 1280px;
-        // height: 260px;
-        float: left;
-        margin: -40px -340px;
-        display: none;
-        ul{
-           
-            width: 100%;
-            height:260px;
-            // float: left;
-          
-            li{ 
-                display: flex;
-                list-style: none;
-                height:260px;
-                text-align: center;
+        padding-left:230px ;
+        .loog{
+            width: 90px;
+            height: 25px;
+            float: left;
+            position: absolute;
+            margin-top: 5px;
+            line-height: 25px;
+            img{
+                width:30px;
                 float: left;
-                margin: 0 auto;
-                position: relative;
-                left: 290px;
-                top: 70px;
+                z-index: 1;
+            }
+            h3{
+                width: 70px;
+                font-weight: 900;
+                color: #000;
+                font-size: 15px;
+                margin-left: 35px;
+                margin-top: 5px;
+            }
+        }
+        .ulnav{
+            width: 750px;
+            list-style: none;
+            float: left;
+            margin-top: 10px;
+            margin-left: 60px;
+            position: absolute;
+            li{
+                float: left;
+                font-size: 15px;
+                font-weight: 500;
+                margin-left: 30px;
+            }
+            .mean{
+                width: 20px;
+                margin-left: 570px;             
+            }
+        }
+        .meannav{
+            width: 180px;
+            height: 120px;
+            background: #fff;
+            position: absolute;
+            top: 30px;
+            left: 900px;
+            color: #000;
+            display: none;
+            img{
+                margin-right: 165px;
                
-                img{
-                    width: 110px;
+            }
+         li{
+             list-style: none;
+             margin-right: 20px;
+               p{
+                 margin: -20px 35px 15px;
+                }
+            
+            }
+            
+        }
+        .box{
+            background-color: #fff;
+            width: 1280px;
+            // height: 260px;
+            float: left;
+            margin: -40px -340px;
+            display: none;
+            ul{
+               
+                width: 100%;
+                height:260px;
+                // float: left;
+              
+                li{ 
+                    display: flex;
+                    list-style: none;
+                    height:260px;
+                    text-align: center;
+                    float: left;
+                    margin: 0 auto;
+                    position: relative;
+                    left: 290px;
+                    top: 70px;
+                   
+                    img{
+                        width: 110px;
+                    }
                 }
             }
         }
     }
 }
+.yincang{
+    display:none;
+}
+.concentwarp{
+    width: 100%;
+    background: #666;
+    padding-top: 30px ;
+    padding-bottom: 60px ;
+    .concent{
+        width: 1280px;
+        height: 400px;
+        margin: 0 auto;
+        background: #fff;
+        color: #000;
+        text-align: center;
+       .concentbox{
+         padding: 130px 0;
+        .goshop{
+            width: 200px;
+            height: 65px;
+            color: #fff;
+            background: #f34141;
+        }
+       }
+       
+    }
+}
 
+.shop{
+
+    width:1280px;
+    padding: 0 40px;
+    margin: 0 auto;
+    background: #ccc;
+    .box{
+        background: #fff;
+        min-height: 50px;
+        h2{
+            color: #333;
+            font-size: 18px;
+            padding-bottom: 16px;
+        }
+        .boxcard{
+            ul{
+                width: 1240px;
+                height: 120px;
+                li{
+                    list-style: none;
+                    float: left;
+                    width: 200px;
+                    height: 50px;
+                    line-height: 50px;
+                    border-top: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
+                }
+                .minus{
+                    position: relative;
+                    left: 40px;
+                    top: -10px;
+                }
+                .plus{
+                    position: relative;
+                    left: 40px;
+                    top: -10px;
+                }
+                .detailbox{
+                    width: 150px;
+                    height: 30px;
+                    margin-top: 10px;
+                  
+                    border: 1px solid #ccc;
+                    .num{
+                        width: 40px;
+                      
+                        position: relative;
+                        left: 40px;
+                        top: -10px;
+                        text-align: center;
+                        border: none;
+                    }
+                }
+            }
+        }
+        
+        .bat{
+        
+            .bat-left{
+                width: 920px;
+                float: left;
+                span{
+                    line-height: 30px;
+                }
+            }
+            .bat-right{
+                width: 300px;
+                float: left;
+                .btn2{
+                    width: 200px;
+                    height: 65px;
+                    color: #fff;
+                    background: #f34141;
+                }
+            }
+        }
+    }
+}
 
 
 
