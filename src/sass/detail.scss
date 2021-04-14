@@ -1,27 +1,38 @@
+$wid:1280px;
+html{
+    overflow-x: hidden;
+}
+body{
+    margin:0; 
+    padding:0;
+}
+
 .navmean{
     width: $wid;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     margin: 0 auto;
     font-size: 10px;
-    color: #fff;
     position: absolute;
-    left: 0px;
-    top: 100px;
-    z-index: 1;
-    padding-left:350px ;
+    background:#fff ;
+    color: #000;
+    padding-left:230px ;
     .loog{
         width: 90px;
         height: 25px;
         float: left;
+        position: absolute;
+        margin-top: 5px;
         line-height: 25px;
         img{
-            width: 25px;
+            width:30px;
             float: left;
             z-index: 1;
         }
         h3{
             width: 70px;
             font-weight: 900;
-            color: #fff;
+            color: #000;
             font-size: 15px;
             margin-left: 35px;
             margin-top: 5px;
@@ -31,8 +42,8 @@
         width: 750px;
         list-style: none;
         float: left;
-        margin-top: 5px;
-        margin-left: 130px;
+        margin-top: 10px;
+        margin-left: 60px;
         position: absolute;
         li{
             float: left;
@@ -42,16 +53,16 @@
         }
         .mean{
             width: 20px;
-          margin-left: 560px;             
+            margin-left: 570px;             
         }
     }
     .meannav{
         width: 180px;
         height: 120px;
         background: #fff;
-        position: relative;
-        top: 40px;
-        right: -650px;
+        position: absolute;
+        top: 30px;
+        left: 900px;
         color: #000;
         display: none;
         img{
@@ -61,19 +72,19 @@
      li{
          list-style: none;
          margin-right: 20px;
-         p{
+           p{
              margin: -20px 35px 15px;
-         }
+            }
         
-     }
+        }
         
     }
     .box{
         background-color: #fff;
         width: 1280px;
-        height: 260px;
+        // height: 260px;
         float: left;
-        margin: -15px -440px;
+        margin: -40px -340px;
         display: none;
         ul{
            
@@ -99,16 +110,152 @@
         }
     }
 }
+.connect{
+    width:$wid ;
+    margin: 0 auto;
+    .pic{
+        margin-top: 100px;
+        margin-left: 100px;
+        width: 500px;
+        float: left;
+        .img1{
+            width: 365px;
+            margin-left: 150px;
+        }
+        .picbox{
+            margin-left: 40px;
+            float: flex;
+            list-style: none;
+            li{
+                opacity: .5;
+                float: left;
+                img{
+                    width: 60px;
+                }
+            }
+        }
+    }
+    .int{
+        float: left;
+        margin-top: 60px;
+        max-width: 492px;
+        padding-top: 80px;
+        padding-left: 68px;
+        padding-right: 40px;
+        .product{
+            text-align: left;
+            margin-top: -75px;
+            border-bottom: 1px solid #EDEDED;
+            .productname{
+                font-size: 22px;
+                line-height: 39px;
+                margin-bottom: 7px;
+                justify-content: space-between;
+            }
+            .producttext{
+                display: inline-block;
+                color: #a0a0a0;
+                font-size: 14px;
+                line-height: 22px;
+                margin-bottom: 12px;
+            }
+        }
+        .list{
+          p{
+            font-size: 14px;
+            line-height: 14px;
+            color: #666;
+            margin-top: 30px;
+            margin-bottom: 20px;
+           } 
+           .color{
+               width: 200px;
+               height: 40px;
+               line-height: 40px;
+               text-align: center;
+               float: left;
+               border: 1px  #81cdb1  solid;
+               margin-right: 10px;
+               margin-bottom: 10px;
+           } 
+         }
+      .pro{
+           margin-top: 140px;
+           p{
+            font-size: 14px;
+            line-height: 14px;
+            color: #666;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+           } 
+           .con{
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            float: left;
+            border: 1px  #81cdb1  solid;
+            margin-right: 10px;
+            margin-bottom: 10px;
+           }
+       }
+        .detail{
+            margin-top: 230px;
+            p{
+                font-size: 14px;
+                line-height: 14px;
+                color: #666;
+                margin-top: 30px;
+                margin-bottom: 20px;
+               } 
+               .detailbox{
+                width: 200px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                float: left;
+                border: 1px  #ccc solid;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                .num{
+                    text-align: center;
+                    border: none;
+                }
+               }
 
-
-
-
-
-
-
-
+           
+    }
+    .btn{
+        margin-top: 100px;
+        .btn1{
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            float: left;
+            background: #ccc;
+            color: #000;
+            margin-right: 10px;
+            margin-bottom: 10px;
+}
+        .btn2{
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            float: left;
+            background: #f45055;
+            color: #fff;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    }
+}
 
 .footer{
+    width: 1280px;
     text-align: center;
     ul{
         list-style: none;
