@@ -5,8 +5,368 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>购物车</title>
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+    <link rel="stylesheet" href="../css/cart.css">
 </head>
 <body>
+    <div class="navmean">
+        <div class="loog">
+            <a href="http://localhost:8080/"><img src="../img/loog.jpg" alt=""></a>
+            <h3>欢太商城</h3>
+        </div>
+        <ul class="ulnav">
+            <li>OPPO专区</li>
+            <li>一加专区</li>
+            <li>realme专区</li>
+            <li>智能硬件</li>
+            <li>智美新品</li>
+            <li>品牌</li>
+            <div class="mean">
+                <img src="../img/shop.jpg" alt="">
+            </div>
+        </ul>
+        <div class="meannav">
+            <ul>
+                <li class="meancard">
+                    <img src="../img/cart.jpg" alt="">
+                    <p>购物车 </p>
+                </li>
+                <li class="meanper">
+                    <img src="../img/per.jpg" alt="">
+                    <p> 个人中心</p>
+                </li>
+                <li class="meanlog">
+                    <img src="../img/key.jpg" alt="">
+                    <p>登录 </p>
+                </li>
+            </ul>
+        </div>
+        <div class="box">
+            <ul>
+                <li>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202103/202103081003486045873054f7a.png?_w_=324&_h_=324&x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>Find X3</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202104/2021040110045660652ac019069.png?_w_=324&_h_=324&x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>Find X3 Pro</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202012/202012140512475fd7353bcd5cf.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>Reno5</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202012/202012240512255fe4628180537.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>Reno5 Pro+</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202104/2021041206043460741aba3e183.png?_w_=324&_h_=324&x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>K7x</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202102/2021022310022060346ed4efe7b.png?_w_=324&_h_=324&x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>智能家族</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202010/202010290710535f9aac9d29271.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>更多</p>
+                        </figcaption>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202104/20210409110425606fcc6d6220d.png?_w_=1120&_h_=1120&x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>OnePlus 9R</p>
+                            <span>新品</span>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202104/20210409110458606fcd7ebed31.png?_w_=1120&_h_=1120&x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>OnePlus 9R pro</p>
+                            <span>新品</span>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202103/20210316110334605029decbc5b.png?_w_=1120&_h_=1120&x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>OnePlus 9</p>
+                            <span>新品</span>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202011/202011041111455fa21ce1cc046.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>OnePlus 8T</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202011/202011041111225fa21d06ed376.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>OnePlus 8</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202103/202103081003486045873054f7a.png?_w_=324&_h_=324&x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>OnePlus 8 Pro</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202010/202010301010105f9c2642acacc.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>更多</p>
+                        </figcaption>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202104/202104010404276065851b68ecf.png?_w_=324&_h_=324&x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>真我GT NEO</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202104/2021041206045360741e8dc6eb8.png?_w_=324&_h_=324&x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>真我X7 Pro至尊版</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202010/202010290310585f9a72fa494b4.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>真我Q2 Pro</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202101/20210118040126600543da5718c.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>真我 V15</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202104/20210401040447606584b72f495.png?_w_=324&_h_=324&x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>真我Buds Air 2</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202010/202010290710345f9aa942632ac.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>更多</p>
+                        </figcaption>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202011/202011030811475fa14d773850e.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>OPPO智能电视R1</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202010/202010290310145f9a75da74208.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>OPPO Enco x</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202104/20210409100424606fb970681b8.png?_w_=1080&_h_=1080&x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>真我Buds Air 2</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202011/202011030811365fa14e984262e.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>OnePlus Buds Z</p>
+                        </figcaption>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202011/202011030711355fa1422be6e1e.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>美的空气净化器</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202011/202011030711075fa1420f7c28a.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>美的除菌加湿器</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202011/202011030711085fa14288deed9.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>乐心智能体脂称S30</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202011/202011051011285fa407206b1ca.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>Blicca智能摄像头</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202011/202011051011285fa407206b1ca.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>欧瑞博智能遥控器</p>
+                        </figcaption>
+                    </div>
+                </li>
+                <li>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202010/202010310810555f9d5adf8973c.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>OPPO官网</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202010/202010310810465f9d5b4ebb15f.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>一加官网</p>
+                        </figcaption>
+                    </div>
+                    <div class="figure">
+                        <img src="https://dsfs.oppo.com/archives/202010/202010310810425f9d5b861fde8.png?x-oss-process=image/format,webp"
+                            alt="">
+                        <figcaption>
+                            <p>realme官网</p>
+                        </figcaption>
+                    </div>
+                </li>
 
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
+        <ul>
+            <li>关于欢太</li>
+            <li>了解欢太</li>
+            <li>欢太产品与服务</li>
+            <li>联系我们</li>
+        </ul>
+        <ul>
+            <li>OPPO产品</li>
+            <li>OPPO Find X3 Pro</li>
+            <li>OPPO Find X3 </li>
+            <li>OPPO Reno5</li>
+            <li>OPPO K7x</li>
+            <li>OPPO A93</li>
+        </ul>
+        <ul>
+            <li>一加产品</li>
+            <li>OnePlus 9系列</li>
+            <li>OnePlus 8T </li>
+            <li>OnePlus 8</li>
+            <li>OnePlus 8Pro</li>
+            <li>OnePlus Buds</li>
+        </ul>
+        <ul>
+            <li>realme产品</li>
+            <li>真我GT NEO</li>
+            <li>真我X7 Pro </li>
+            <li>真我Q2 Pro</li>
+            <li>真我V15</li>
+            <li>真我Buds Air Pro</li>
+        </ul>
+        <ul>
+            <li>服务政策</li>
+            <li>OPPO售后政策</li>
+            <li>一加售后政策</li>
+            <li>realme售后政策</li>
+            <li>配送发货说明</li>
+            <li>花呗分期说明</li>
+            <li>电子发票说明</li>
+        </ul>
+        <div class="tel">
+            <button id="btn">在线客服</button>
+            <h3>400-1999-666</h3>
+            <p>24小时全国热线</p>
+        </div>
+        <div class="ttt">
+            © 2021 欢太 版权所有
+            <a href="http://beian.miit.gov.cn" target="_blank">
+                粤ICP备14012291号
+            </a>
+            | <a href="/legal/privacy/privacy-policies.html" target="_blank">
+                隐私政策
+            </a> |
+            <a href="/legal/privacy/user-agreement.html" target="_blank">
+                用户使用协议
+            </a> |
+            <a href="/legal/privacy/show-license.html" target="_blank">
+                资质证照
+            </a>
+            |
+            <a href="/legal/privacy/intellectual-property.html" target="_blank">
+                知识产权
+            </a>
+            <div style="width:300px;margin:0 auto; padding:20px 0;">
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44190002004935"
+                    style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+                        src="https://dsfs.oppo.com/oppo/images/common/police-25797632ad.png" style="float:left;">
+                    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">粤公网安备
+                        44190002004935号</p>
+                </a>
+            </div>
+        </div>
+    </div> 
+    <div class="app">
+        <a href="https://nps.oppo.com/evaluation-web/regular.html?qnId=5236373871739535363">给个评分吧</a>
+    </div>
+    <script src="../js/cart.js"></script>
 </body>
 </html>

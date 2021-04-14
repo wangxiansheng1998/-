@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+
 </head>
 
 <body>
@@ -18,11 +20,14 @@
             add(v)
         });
         function add(obj) {
-            $.get("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php", {
-                pimg: obj.pimg,
-                pname: obj.pname,
-                pprice: obj.pprice,
-                uid: 51165
+            axios.post("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php", {
+                params: {
+                    pimg: obj.pimg,
+                    pname: obj.pname,
+                    pprice: obj.pprice,
+                    uid: 51192
+                }
+
             }).then(res => {
                 console.log(res);
             })
