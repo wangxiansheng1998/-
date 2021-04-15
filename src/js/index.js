@@ -9,13 +9,15 @@ $(function () {
         },
         mouseout: function () {
             $(".box").hide();
-            $(".ulnav").css({ "color": "#000" });
+            $(".ulnav").css({ "color": "#fff" });
 
         }
     })
     $(".ulnav li").hover(function () {
+        $(".box").css({ "color": "#000" });
         $(".box").show().hover(function () {
             $(this).show();
+           
         }, function () {
             $(this).hide();
 
@@ -29,6 +31,12 @@ $(function () {
 $(".mean").click(function () {
     $(".meannav").toggle();
 
+})
+$(".meancard").click(function () {
+    location.href = "html/cart.html";
+})
+$(".meanlog").click(function () {
+    location.href = "html/rejist.html";
 })
 let st = $(".figure1").offset().bottom
 if (st >= 20) {
@@ -59,32 +67,46 @@ $(".concent .text2").mouseover(function () {
 
 axios.get("http://jx.xuzhixiang.top/ap/api/productlist.php", {
     params: {
-        uid: "51192"
+        uid:51192
     }
 }).then(res => {
     console.log(res);
     let data = res.data.data
     console.log(data);
-    let str = ""
-    data.forEach(items => {
+    let str = 
+    `
+    <div class="phone">
+    <div class="figure1">
+    <a href="../html/detail.html?id=${data[0].pid}">
+        <img src="${data[0].pimg}"
+            alt="">
+        <div class="txt">
+            <h3>${data[0].pname}</h3>
+            <h4>${data[0].pprice}</h4>
+        </div>
+        </a>
+    </div>
+    `
+    for(let i=1; i<data.length;i++) {
+        console.log(data[i]);
         str +=
             `
-         
                      <div class="figure">
-                     <a href="../html/detail.html?id=${items.pid}">
-                     <img src="${items.pimg}"alt="">
+                     <a href="../html/detail.html?id=${data[i].pid}">
+                     <img src="${data[i].pimg}"alt="">
                      <figcaption>
-                     <h3>${items.pname}</h3>
-                     <h4>${items.pprice}</h4>
+                     <h3>${data[i].pname}</h3>
+                     <h4>${data[i].pprice}</h4>
                      </figcaption>
                      </a>
                  </div>
-        
-     `
-    });
+            `
+            console.log();
+    };
 
     $(".phone").html(str)
-    $(".phone").find("div").eq(0).attr('class', "figure1");
-    $(".figure1").children("img").css({ "margin-top": "105px"})
- 
+    
+    // $(".phone").find("div").eq(0).attr('class', "figure1");
+    //   $(".figure1 div:nth-child(1)").css({"margin-left":"100px"})
+
 })

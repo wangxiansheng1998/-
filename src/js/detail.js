@@ -31,6 +31,12 @@ $(".mean").click(function () {
     $(".meannav").toggle();
 
 })
+$(".meancard").click(function(){
+    location.href = "html/cart.html";
+})
+$(".meanlog").click(function(){
+    location.href = "html/rejist.html";
+})
 let getId = new URLSearchParams(location.search);
 let id = getId.get("id")
 axios.get("http://jx.xuzhixiang.top/ap/api/detail.php", {
